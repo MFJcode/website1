@@ -1,11 +1,10 @@
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own dessign */
+/* Custom Properties, update these for your own design */
 
 :root {
     --ff-primary: 'Lora', serif;
@@ -22,14 +21,13 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-
+    
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
     :root {
-        
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
@@ -37,12 +35,13 @@
     }
 }
 
-
 /* General styles */
 
-html {
+/* endable this to add smooth scrolling */
+/* html {
     scroll-behavior: smooth;
-}
+} */
+
 
 body {
     background: var(--clr-light);
@@ -213,6 +212,11 @@ header {
     opacity: 0;
 }
 
+
+
+
+
+
 .hamburger {
     display: block;
     position: relative;
@@ -221,7 +225,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -239,8 +243,6 @@ header {
 
 .hamburger::before { top: 6px; }
 .hamburger::after { bottom: 6px; }
-
-
 
 
 /*  Intro section  */
@@ -288,6 +290,7 @@ header {
 }
 
 
+
 /*  My services section  */
 
 .my-services {
@@ -307,7 +310,7 @@ header {
 .section__title--services::after {
     content: '';
     display: block;
-    width: 3em;
+    width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
@@ -336,6 +339,7 @@ header {
     }
 }
 
+
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
@@ -356,6 +360,10 @@ header {
         grid-column-gap: 2em;
     }
     
+    .section__title--about {
+        grid-area: title;
+    }
+    
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
@@ -373,7 +381,6 @@ header {
     }
 }
 
-
 /* My Work */
 
 .my-work {
@@ -386,7 +393,6 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
 
 .portfolio__item {
     background: var(--clr-accent);
@@ -409,6 +415,7 @@ header {
     transform: scale(1.2);
     opacity: .5;
 }
+
 
 /* footer */
 
@@ -454,7 +461,6 @@ header {
 .social-list__link {
     padding: .5em;
 }
-
 
 
 /* Individual portfolio item styles */
